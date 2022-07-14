@@ -1,14 +1,19 @@
 package com.research.mvilatihan.ui.main.viewmodel
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.research.mvilatihan.data.repository.MainRepository
 import com.research.mvilatihan.ui.main.intent.MainIntent
 import com.research.mvilatihan.ui.main.viewstate.MainState
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.consumeAsFlow
+import kotlinx.coroutines.launch
 
+@ExperimentalCoroutinesApi
 class MainViewModel(
     private val repository: MainRepository
 ) : ViewModel() {

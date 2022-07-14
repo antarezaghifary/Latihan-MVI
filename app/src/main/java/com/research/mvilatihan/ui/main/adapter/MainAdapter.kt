@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.research.mvilatihan.R
 import com.research.mvilatihan.data.model.User
+import kotlinx.android.synthetic.main.item_layout.view.*
 
 class MainAdapter(
     private val users: ArrayList<User>
